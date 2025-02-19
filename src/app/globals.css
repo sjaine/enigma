@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --light: #FEFCE7;
+  --color-light1: #F8DCAD;
+  --color-light2: #C9CC97;
+  --color-light3: #91A476;
+  --color-light4: #FAAA77;
+  --color-light5: #F2735D;
+  --color-dark: #192525;
+  --color-dark1: #305053;
+  --color-dark2: #055C86;
+  --color-dark3: #425363;
+  --color-dark4: #ACAFA8; 
+  --color-brown: #5B3303;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    --light: #FEFCE7;
+    --color-light1: #F8DCAD;
+    --color-light2: #C9CC97;
+    --color-light3: #91A476;
+    --color-light4: #FAAA77;
+    --color-light5: #F2735D;
+    --color-dark: #192525;
+    --color-dark1: #305053;
+    --color-dark2: #055C86;
+    --color-dark3: #425363;
+    --color-dark4: #ACAFA8; 
+
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.logo {
+  font-family: var(--font-londrina);
+}
+
+.subhead {
+  font-family: var(--font-archivo);
+}
+
+.gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 44.5%, #000 100%);
+  mix-blend-mode: multiply;
+}
