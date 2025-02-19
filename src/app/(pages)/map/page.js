@@ -15,7 +15,7 @@ function Map() {
   const mapContainerRef = useRef()
 
   useEffect(() => {
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic2phaW5lIiwiYSI6ImNsbnJ3N3o1eTE4a3YycXA2bmJiYTdueG4ifQ.z0XgR_x9cWIkqzi2oW5-aQ'
+    mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
