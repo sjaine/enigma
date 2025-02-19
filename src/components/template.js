@@ -30,7 +30,7 @@ export default function Template({
             <p className="inline-block rounded-lg text-light bg-brown px-10 logo text-3xl absolute top-0 left-10">
               {characterName}
             </p>
-            <p className="bg-light text-brown w-full h-40 border-2 border-brown rounded-3xl flex justify-center items-center p-7">
+            <p className="bg-light text-brown w-full h-40 border-2 border-brown rounded-3xl flex justify-center items-center p-7 manrope">
               {paragraphText}
             </p>
 

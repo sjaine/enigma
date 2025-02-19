@@ -60,3 +60,7 @@ body {
 .nextjs-toast {
   display: none !important;
 }
+
+.manrope {
+  font-family: var(--font-manrope);
+}

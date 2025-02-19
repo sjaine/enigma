@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Londrina_Solid, Archivo_Narrow } from "next/font/google";
+import { Geist, Geist_Mono, Londrina_Solid, Archivo_Narrow, Manrope } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,6 +22,11 @@ const ArchivoNarrow = Archivo_Narrow({
   subsets: ["latin"],
 });
 
+const fontManrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+});
+
 
 export const metadata = {
   title: "Enigma",
@@ -32,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${LondrinaSolid.variable} ${ArchivoNarrow.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${LondrinaSolid.variable} ${ArchivoNarrow.variable} ${fontManrope.variable} antialiased`}
       >
         {children}
       </body>
