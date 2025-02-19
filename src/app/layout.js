@@ -30,7 +30,7 @@ const fontManrope = Manrope({
 
 export const metadata = {
   title: "Enigma",
-  description: "Explore new world",
+  description: "The future lies in your hands",
 };
 
 export default function RootLayout({ children }) {
