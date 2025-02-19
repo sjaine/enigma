@@ -14,7 +14,7 @@ export default function Template({
       <div className="w-screen h-screen fixed z-20 flex justify-end items-end">
 
         {/* Main */}
-        <div className="mb-10 relative w-full">
+        <div className="mb-20 relative w-full">
 
           {/* Character Image - Dynamic based on characterName */}
           <Image
