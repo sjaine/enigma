@@ -11,7 +11,7 @@ export default function Template({
 }) {
   return (
     <>
-      <div className="w-screen h-screen fixed z-20 flex justify-end items-end">
+      <div className="w-screen h-screen fixed z-20 flex justify-end items-end template_box">
 
         {/* Main */}
         <div className="mb-20 relative w-full">

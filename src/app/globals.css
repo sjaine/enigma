@@ -64,3 +64,7 @@ body {
 .manrope {
   font-family: var(--font-manrope);
 }
+
+.template_box {
+  max-width: 472px;
+}

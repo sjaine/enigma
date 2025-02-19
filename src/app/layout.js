@@ -39,7 +39,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${LondrinaSolid.variable} ${ArchivoNarrow.variable} ${fontManrope.variable} antialiased`}
       >
-        {children}
+        <div className="flex justify-center">
+          {children}
+        </div>
       </body>
     </html>
   );
