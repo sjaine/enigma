@@ -17,7 +17,7 @@ export default function Page() {
       <div className="z-10 relative flex justify-center items-center flex-col gap-7">
         <p className="text-xl text-darkerGreen subhead font-semibold">Welcome to...</p>
         <p className="text-8xl logo text-light drop-shadow-lg">ENIGMA</p>
-        <button onClick={() => router.push('/narrative')} className="text-xl drop-shadow-lg logo text-darkerGreen rounded-full bg-lightyellow px-8 py-0.5">Start</button>
+        <button onClick={() => router.push('/fen/narrative')} className="text-xl drop-shadow-lg logo text-darkerGreen rounded-full bg-lightyellow px-8 py-0.5">Start</button>
       </div>
     </div>
   )
