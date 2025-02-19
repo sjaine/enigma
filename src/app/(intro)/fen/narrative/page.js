@@ -51,30 +51,9 @@ export default function NarrativePage() {
     },
     {
       characterName: 'Fen',
-      paragraphText: 'Together, we can unearth the clues necessary to prevent history from repeating itself...',
+      paragraphText: 'But we must act quickly—because he is already on his way.',
       bgImage: '/bc-1.png',
-    },
-    {
-    // Before here, there should be some effects looks like interrupted from something.
-      characterName: 'Fen',
-      paragraphText: 'There’s not much time, so I’ll make this quick: To prevent your world from reliving the past, you must find the first clue.',
-      bgImage: '/bc-1.png',
-    },
-    {
-      characterName: 'Fen',
-      paragraphText: 'Your first mission involves finding the location on campus that fulfills this tricky riddle: ',
-      bgImage: '/bc-1.png',
-    },
-    {
-      characterName: 'Fen',
-      paragraphText: '“I hold many worlds yet never leave my place. Pages turn within me, but I never show my face. What am I?”',
-      bgImage: '/bc-1.png',
-    },
-    {
-      characterName: 'Fen',
-      paragraphText: '“I hold many worlds yet never leave my place. Pages turn within me, but I never show my face. What am I?”',
-      bgImage: '/bc-1.png',
-    },
+    }
   ]
 
   const handleNext = () => {
@@ -86,8 +65,8 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 12) {
-      router.push('/map')
+    if (currentIndex === 8) {
+      router.push('/narrative')
     }
   }, [currentIndex, router])
 

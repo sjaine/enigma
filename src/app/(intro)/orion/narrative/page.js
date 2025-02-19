@@ -43,6 +43,11 @@ export default function NarrativePage() {
       characterName: 'Orion',
       paragraphText: 'Your first test involves...',
       bgImage: '/bc-1.png',
+    },
+    {
+      characterName: 'Orion',
+      paragraphText: 'Your first test involves...',
+      bgImage: '/bc-1.png',
     }
   ]
 
@@ -55,8 +60,8 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 12) {
-      router.push('/map')
+    if (currentIndex === 7) {
+      router.push('/narrative')
     }
   }, [currentIndex, router])
 
