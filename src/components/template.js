@@ -4,6 +4,7 @@ import Image from 'next/image'
 export default function Template({
   characterName,
   paragraphText,
+  characterImageSrc,
   bgImage,
   onNext,
   onBack,
@@ -17,13 +18,15 @@ export default function Template({
         <div className="mb-20 relative w-full">
 
           {/* Character Image - Dynamic based on characterName */}
-          <Image
-            className="absolute bottom-52"
-            src={`/${characterName.toLowerCase()}.png`}
-            alt={characterName}
-            width={230}
-            height={230}
-          />
+          {characterImageSrc && (
+            <Image
+              className="absolute bottom-52"
+              src={characterImageSrc}
+              alt={characterName}
+              width={230}
+              height={230}
+            />
+          )}
 
           {/* Boxes */}
           <div className="w-full relative p-4">
