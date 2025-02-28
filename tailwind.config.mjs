@@ -14,6 +14,7 @@ export default {
         darkerGreen: "var(--color-dark1)",
         lightyellow: "var(--color-light1)",
         brown: "var(--color-brown)",
+        redLight: "var(--color-light5)",
       },
       backgroundImage: {
         'bc-1': "url('/bc-1.png')",

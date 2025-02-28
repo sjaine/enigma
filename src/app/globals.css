@@ -68,3 +68,11 @@ body {
 .template_box {
   max-width: 472px;
 }
+
+.card {
+  width: 350px;
+  height: 510px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
