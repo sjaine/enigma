@@ -10,7 +10,7 @@ function Map() {
   const userLocationRef = useRef(null);
   const geolocateControlRef = useRef(null);
 
-  const destinationCoordinates = [-79.6986865957049, 43.4684768691731]; // [longitude, latitude]
+  const destinationCoordinates = [-79.7007482022124, 43.4679251056901]; // [longitude, latitude]
 
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
