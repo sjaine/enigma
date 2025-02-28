@@ -8,46 +8,29 @@ export default function NarrativePage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const router = useRouter()
 
-  const scenes = [
-    {
-      characterName: 'Orion',
-      paragraphText: 'The world has always been so... predictable.',
+  const scenes = [{
+      characterName: '',
+      paragraphText: 'The year is 2025. The world as you know it is on the verge of encountering a darkness it has not seen in some time.  ',
       bgImage: '/bc-1.png',
+      characterImageSrc: '',
     },
     {
-      characterName: 'Orion',
-      paragraphText: 'People are weak, blind, and easily swayed.',
+      characterName: '',
+      paragraphText: 'An inky shadow has plans to root itself in your world, and parallel the destruction it has forged in alternative worlds.',
       bgImage: '/bc-1.png',
+      characterImageSrc: '',
     },
     {
-      characterName: 'Orion',
-      paragraphText: 'heir hopes and dreams are nothing more than fragile illusions, waiting to be shattered.',
+      characterName: '',
+      paragraphText: ' You are one of the few who can navigate this world, and uncover secrets long forgotten to help restore it, before it’s too late. ',
       bgImage: '/bc-1.png',
+      characterImageSrc: '',
     },
     {
-      characterName: 'Orion',
-      paragraphText: 'I didn’t get this far by playing fair. Betrayal? Deceit? They’re just tools, just means to an end.',
+      characterName: '',
+      paragraphText: 'Your First Task: Travel to the rainbow bridge and scan the QR code to enter Enigma. ',
       bgImage: '/bc-1.png',
-    },
-    {
-      characterName: 'Orion',
-      paragraphText: 'I’ve built an empire from nothing, and now… I’ll transform this world to forge a new empire from its ashes. Nothing, no one will stand in my way.',
-      bgImage: '/bc-1.png',
-    },
-    {
-      characterName: 'Orion',
-      paragraphText: 'With your assistance, I can determine the clues necessary to ensure history repeats itself. Double-cross me and see what happens when...',
-      bgImage: '/bc-1.png',
-    },
-    {
-      characterName: 'Orion',
-      paragraphText: 'Your first test involves...',
-      bgImage: '/bc-1.png',
-    },
-    {
-      characterName: 'Orion',
-      paragraphText: 'Your first test involves...',
-      bgImage: '/bc-1.png',
+      characterImageSrc: '',
     }
   ]
 
@@ -60,7 +43,7 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 7) {
+    if (currentIndex === 8) {
       router.push('/narrative')
     }
   }, [currentIndex, router])
@@ -68,6 +51,7 @@ export default function NarrativePage() {
   return (
     <Template
       characterName={scenes[currentIndex].characterName}
+      characterImageSrc={scenes[currentIndex].characterImageSrc}
       paragraphText={scenes[currentIndex].paragraphText}
       bgImage={scenes[currentIndex].bgImage}
       onNext={handleNext}

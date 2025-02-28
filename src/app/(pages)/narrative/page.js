@@ -14,37 +14,37 @@ export default function NarrativePage() {
       characterName: 'Fen',
       paragraphText: 'There’s not much time, so I’ll make this quick: To prevent your world from reliving the past, you must find the first clue.',
       bgImage: '/bc-1.png',
-      characterImageSrc: '/fen-uu.png',
+      characterImageSrc: '/fen/fen-uu.png',
     },
     {
       characterName: 'Fen',
       paragraphText: 'Your first mission involves finding the location on campus that fulfills this tricky riddle: ',
       bgImage: '/bc-1.png',
-      characterImageSrc: '/fen-e.png',
+      characterImageSrc: '/fen/fen-e.png',
     },
     {
       characterName: 'Fen',
       paragraphText: '“I hold many worlds yet never leave my place. Pages turn within me, but I never show my face. What am I?”',
       bgImage: '/bc-1.png',
-      characterImageSrc: '/fen-e.png',
+      characterImageSrc: '/fen/fen-e.png',
     },
     {
       characterName: 'Fen',
       paragraphText: 'Once you’ve determined the location, head there and begin searching for Instagram @account_names.',
       bgImage: '/bc-1.png',
-      characterImageSrc: '/fen-d.png',
+      characterImageSrc: '/fen/fen-d.png',
     },
     {
       characterName: 'Fen',
       paragraphText: ' Then, explore them on your personal device to determine which amongst the fake news is real. With each account found, you’ll be one step closer to saving your world. Best of luck!',
       bgImage: '/bc-1.png',
-      characterImageSrc: '/fen-e.png',
+      characterImageSrc: '/fen/fen-e.png',
     },
     {
       characterName: 'Fen',
       paragraphText: ' Then, explore them on your personal device to determine which amongst the fake news is real. With each account found, you’ll be one step closer to saving your world. Best of luck!',
       bgImage: '/bc-1.png',
-      characterImageSrc: '/fen-e.png',
+      characterImageSrc: '/fen/fen-e.png',
     },
   ]
 
@@ -58,7 +58,7 @@ export default function NarrativePage() {
 
   useEffect(() => {
     if (currentIndex === 5) {
-      router.push('/map')
+      router.push('/card')
     }
   }, [currentIndex, router])
 
