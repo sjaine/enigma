@@ -44,7 +44,7 @@ export default function NarrativePage() {
 
   useEffect(() => {
     if (currentIndex === 8) {
-      router.push('/narrative')
+      router.push('/first-task')
     }
   }, [currentIndex, router])
 
