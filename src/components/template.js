@@ -23,8 +23,8 @@ export default function Template({
               className="absolute bottom-48 char-img"
               src={characterImageSrc}
               alt={characterName}
-              width={270}
-              height={270}
+              width={characterImageSrc.includes("fen-thumb") ? 340 : 270}
+              height={characterImageSrc.includes("fen-thumb") ? 340 : 270}
             />
           )}
 
