@@ -13,7 +13,7 @@ export default function NarrativePage() {
     // Before here, there should be some effects looks like interrupted from something.
       characterName: 'Fen',
       paragraphText: 'With the knowledge acquired from the previous task, it’s time to put it into practice. Complete this balance game to proceed to the next clue. ',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-c.png',
       characterImageSrc: '/fen/fen-e.png',
     },
   ]

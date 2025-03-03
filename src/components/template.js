@@ -20,11 +20,11 @@ export default function Template({
           {/* Character Image - Dynamic based on characterName */}
           {characterImageSrc && (
             <Image
-              className="absolute bottom-52"
+              className="absolute bottom-48 char-img"
               src={characterImageSrc}
               alt={characterName}
-              width={230}
-              height={230}
+              width={270}
+              height={270}
             />
           )}
 

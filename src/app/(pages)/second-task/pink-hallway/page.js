@@ -13,13 +13,13 @@ export default function NarrativePage() {
     // Before here, there should be some effects looks like interrupted from something.
       characterName: 'Fen',
       paragraphText: 'In this hallway, there are several hidden multi-linguistic clues. But which is the right one?',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-p.png',
       characterImageSrc: '/fen/fen-e.png',
     },
     {
       characterName: 'Fen',
       paragraphText: 'With your help, this next task involves translating and determining which phrase is the direct translation of the word: “Koyaanisqatsi”.',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-p.png',
       characterImageSrc: '/fen/fen-c.png',
     },
   ]

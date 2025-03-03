@@ -13,13 +13,13 @@ export default function NarrativePage() {
     // Before here, there should be some effects looks like interrupted from something.
       characterName: 'Fen',
       paragraphText: 'Excellent work! You’ve discovered the correct translation. In turn, you now know what fate this darkness will unleash upon your world. ',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-p.png',
       characterImageSrc: '/fen/fen-thumb.png',
     },
     {
       characterName: 'Fen',
       paragraphText: 'To continue your efforts to prevent your world from experiencing the same end as mine, head to the cafeteria and locate a QR code.',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-p.png',
       characterImageSrc: '/fen/fen-d.png',
     },
   ]

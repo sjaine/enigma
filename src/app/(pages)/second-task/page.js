@@ -13,25 +13,25 @@ export default function NarrativePage() {
     // Before here, there should be some effects looks like interrupted from something.
       characterName: 'Fen',
       paragraphText: 'Congratulations! You’ve identified the real news source. Keep in mind moving forward, that not everything is as it seems....',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-l.png',
       characterImageSrc: '/fen/fen-c.png',
     },
     {
       characterName: 'Fen',
       paragraphText: 'Now, you must find the next on-campus location using this hint: ',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-l.png',
       characterImageSrc: '/fen/fen-d.png',
     },
     {
       characterName: 'Fen',
       paragraphText: ' "I’m a path that’s painted bright, With walls that tell stories through art and light. Every step you take, a new scene unfolds, But stay too long, and the pictures grow cold. What am I?"',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-l.png',
       characterImageSrc: '/fen/fen-e.png',
     },
     {
       characterName: 'Fen',
       paragraphText: ' "I’m a path that’s painted bright, With walls that tell stories through art and light. Every step you take, a new scene unfolds, But stay too long, and the pictures grow cold. What am I?"',
-      bgImage: '/bc-1.png',
+      bgImage: '/bc-l.png',
       characterImageSrc: '/fen/fen-e.png',
     },
   ]
