@@ -12,7 +12,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 function Map() {
-    const [step, setStep] = useState(1);
     const router = useRouter()
 
     const mapRef = useRef()
@@ -131,94 +130,23 @@ function Map() {
       />
 
       <div className="fixed bg-light card text-brown border-2 border-brown rounded-3xl flex justify-center items-center flex-col p-5 gap-[30px]">
-        {step === 1 && (
-            // Question
-            <>
-            <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
-                <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">?</div>
-                <p>What am I?</p>
-            </div>
+        <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
+            <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">!</div>
+            <p>New Quest!</p>
+        </div>
 
-            <div className="flex gap-[20px] flex-col subhead text-lg">
-                <p>Fin left me with the first task to complete—but there’s a riddle, a tricky one at that:</p>
-                <p>“I hold many worlds yet never leave my place. Pages turn within me, but I never show my face. What am I?” </p>
-                <p>Can you make sense of it? </p>
-            </div>
-            <button onClick={() => setStep(2)} className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-4 rounded-full logo text-xl">
-                Choose the answer
-            </button>
-            </>
-        )}
-
-        {step === 2 && (
-            // Choice
-            <>
-            <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
-                <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">?</div>
-                <p>What am I?</p>
-            </div>
-
-            <div className="block w-full flex flex-col gap-[15px]">
-                {["The Cafeteria", "The Library", "The Bookstore", "J222"].map(
-                (option, index) => (
-                    <button
-                    key={index}
-                    className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2"
-                    onClick={() => setStep(option === "The Library" ? 4 : 3)} 
-                    >
-                    {option}
-                    </button>
-                )
-                )}  
-            </div>
-            </>
-        )}
-
-        {step === 3 && (
-            // Wrong!
-            <>
-            <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
-                <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">?</div>
-                <p>What am I?</p>
-            </div>
-
-            <h2 className="text-2xl font-bold text-brown mt-2">Hint!</h2>
-            <p className="text-brown mt-3">
-                This place holds countless stories, but never moves. You turn its
-                pages, but never see its face...
-            </p>
-
-            <button
-                onClick={() => setStep(4)}
-                className="bg-green-500 text-light font-bold py-2 px-4 mt-4 rounded-full"
-            >
-                Show Answer
-            </button>
-            </>
-        )}
-
-        {step === 4 && (
-            // Quest
-            <>
-            <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
-                <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">!</div>
-                <p>New Quest!</p>
-            </div>
-
-            <div>
-                {/* image */}
-                <p className="text-base text-brown mt-2">📍 Location: Library</p>
-                <p className="text-base text-brown mt-3">📝 Task: Head to Library, and finish your task blah blah</p>
-            </div>
-            
-            <button
-                onClick={() => router.push('/third-task/map')}
-                className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-4 rounded-full logo text-xl"
-            >
-                Get Direction
-            </button>
-            </>
-        )}
+        <div>
+            <img src="/cafeteria.jpg" alt="cafeteria" className="questImg mb-5" />
+            <p className="text-xl text-brown mt-2 subhead">📍 Location: Cafeteria</p>
+                <p className="text-xl text-brown mt-3 subhead">📝 Task: Head to the Cafeteria. There, seek the next task.</p>
+        </div>
+        
+        <button
+            onClick={() => router.push('/third-task/map')}
+            className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-4 rounded-full logo text-xl"
+        >
+            Get Direction
+        </button>
       </div>
     </>
   )

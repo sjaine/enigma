@@ -140,8 +140,8 @@ function Map() {
             </div>
 
             <div className="flex gap-[20px] flex-col subhead text-lg">
-                <p>Fin left me with the first task to complete—but there’s a riddle, a tricky one at that:</p>
-                <p>“I hold many worlds yet never leave my place. Pages turn within me, but I never show my face. What am I?” </p>
+                <p>I’ve been left with the second task to complete – but there’s a riddle to solve.</p>
+                <p>"I’m a path that’s painted bright, With walls that tell stories through art and light. Every step you take, a new scene unfolds, But stay too long, and the pictures grow cold. What am I?”</p>
                 <p>Can you make sense of it? </p>
             </div>
             <button onClick={() => setStep(2)} className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-4 rounded-full logo text-xl">
@@ -159,12 +159,12 @@ function Map() {
             </div>
 
             <div className="block w-full flex flex-col gap-[15px]">
-                {["The Cafeteria", "The Library", "The Bookstore", "J222"].map(
+                {["The Art Pit", "The Cafeteria", "The Pink Hallway", "J-Wing"].map(
                 (option, index) => (
                     <button
                     key={index}
                     className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2"
-                    onClick={() => setStep(option === "The Library" ? 4 : 3)} 
+                    onClick={() => setStep(option === "The Pink Hallway" ? 4 : 3)} 
                     >
                     {option}
                     </button>
@@ -179,20 +179,18 @@ function Map() {
             <>
             <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
                 <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">?</div>
-                <p>What am I?</p>
+                <p>Try Again!</p>
             </div>
 
-            <h2 className="text-2xl font-bold text-brown mt-2">Hint!</h2>
-            <p className="text-brown mt-3">
-                This place holds countless stories, but never moves. You turn its
-                pages, but never see its face...
+            <p className="text-xl text-brown mt-3 subhead">
+            "I’m a path that’s painted bright, With walls that tell stories through art and light. Every step you take, a new scene unfolds, But stay too long, and the pictures grow cold. What am I?”
             </p>
 
             <button
-                onClick={() => setStep(4)}
-                className="bg-green-500 text-light font-bold py-2 px-4 mt-4 rounded-full"
+                onClick={() => setStep(2)}
+                className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-4 rounded-full logo text-xl"
             >
-                Show Answer
+                Go Back!
             </button>
             </>
         )}
@@ -206,9 +204,9 @@ function Map() {
             </div>
 
             <div>
-                {/* image */}
-                <p className="text-base text-brown mt-2">📍 Location: Library</p>
-                <p className="text-base text-brown mt-3">📝 Task: Head to Library, and finish your task blah blah</p>
+                <img src="/ph.jpg" alt="pink hallway" className="questImg mb-5" />
+                <p className="text-xl text-brown mt-2 subhead">📍 Location: Pink Hallway</p>
+                <p className="text-xl text-brown mt-3 subhead">📝 Task: Head to the Pink Hallway. There, seek the next task.</p>
             </div>
             
             <button

@@ -22,6 +22,12 @@ export default function NarrativePage() {
       bgImage: '/bc-p.png',
       characterImageSrc: '/fen/fen-d.png',
     },
+    {
+      characterName: 'Fen',
+      paragraphText: 'To continue your efforts to prevent your world from experiencing the same end as mine, head to the cafeteria and locate a QR code.',
+      bgImage: '/bc-p.png',
+      characterImageSrc: '/fen/fen-d.png',
+    },
   ]
 
   const handleNext = () => {
@@ -33,8 +39,8 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 3) {
-      router.push('/second-task/card')
+    if (currentIndex === 2) {
+      router.push('/third-task/card')
     }
   }, [currentIndex, router])
 
