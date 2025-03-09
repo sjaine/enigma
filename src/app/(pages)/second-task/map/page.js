@@ -10,6 +10,9 @@ function Map() {
   const userLocationRef = useRef(null);
   const geolocateControlRef = useRef(null);
 
+  // State to toggle hint menu
+  const [showHints, setShowHints] = useState(false);
+
   const destinationCoordinates = [-79.6986865957049, 43.4684768691731]; // [longitude, latitude]
 
   useEffect(() => {
