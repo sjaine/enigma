@@ -87,3 +87,25 @@ body {
   width: 100%;
   object-fit: cover;
 }
+
+.hint-btn {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #f4e3c3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.help-btn {
+  position: fixed;
+  right: 0;
+  margin: 10px 10px 0 0;
+}
+
+.mapboxgl-ctrl-top-right {
+  display: none;
+}

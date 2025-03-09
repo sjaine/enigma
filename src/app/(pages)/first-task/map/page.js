@@ -12,6 +12,9 @@ function Map() {
 
   const destinationCoordinates = [-79.6988871657093, 43.4686279785684]; // [longitude, latitude]
 
+  // State to toggle hint menu
+  const [showHints, setShowHints] = useState(false);
+
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -133,6 +136,44 @@ function Map() {
         ref={mapContainerRef}
         style={{ width: '100%', height: '100vh' }} // Full screen height
       />
+
+      {/* Help Button */}
+      <div
+        className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center help-btn logo text-3xl cursor-pointer"
+        onClick={() => setShowHints(!showHints)}
+      >
+        ?
+      </div>
+
+      {/* Hint Options */}
+      {showHints && (
+        <div className="absolute w-full flex flex-col gap-[15px] bottom-[0px] p-16">
+          <button
+            className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
+            onClick={() => alert('First hint: Move towards J-Wing')}
+          >
+            First Hint
+          </button>
+          <button
+            className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
+            onClick={() => alert('Second hint: You are near a green space')}
+          >
+            Second Hint
+          </button>
+          <button
+            className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
+            onClick={() => alert('Third hint: Look for a building sign')}
+          >
+            Third Hint
+          </button>
+          <button
+            className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
+            onClick={() => alert('The answer is J-Wing!')}
+          >
+            The Answer
+          </button>
+        </div>
+      )}
     </>
   );
 }
