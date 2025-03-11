@@ -31,6 +31,12 @@ export default function NarrativePage() {
       paragraphText: 'Your First Task: Travel to the rainbow bridge and scan the QR code to enter Enigma. ',
       bgImage: '/bc-1.png',
       characterImageSrc: '',
+    },
+    {
+      characterName: '',
+      paragraphText: 'Your First Task: Travel to the rainbow bridge and scan the QR code to enter Enigma. ',
+      bgImage: '/bc-1.png',
+      characterImageSrc: '',
     }
   ]
 
@@ -43,8 +49,8 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 8) {
-      router.push('/first-task')
+    if (currentIndex === 4) {
+      router.push('/card')
     }
   }, [currentIndex, router])
 
