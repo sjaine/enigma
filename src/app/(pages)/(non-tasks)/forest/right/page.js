@@ -47,12 +47,6 @@ export default function NarrativePage() {
     },
     {
       characterName: 'Orion',
-      paragraphText: 'Once you’ve deciphered the anagram, access this link to discover the future of your world (link to webpage here).',
-      bgImage: '/forest.png',
-      characterImageSrc: '/orion/orion-s.png',
-    },
-    {
-      characterName: 'Orion',
       paragraphText: 'I speak without a tongue, yet tell no lies.',
       bgImage: '/forest.png',
       characterImageSrc: '/orion/orion-m.png',
@@ -80,7 +74,7 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 9) {
+    if (currentIndex === 8) {
       router.push('/forest/card')
     }
   }, [currentIndex, router])
