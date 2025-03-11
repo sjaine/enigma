@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <div className="relative w-screen h-screen flex justify-center items-center">
       {/* Background Image */}
-      <Image className="z-0 object-cover" src="/bc.png" alt="background" fill />
+      <Image className="z-0 object-cover" src="/fen/fen-bc.png" alt="background" fill />
 
       {/* Buttons */}
       <div className="z-10 relative flex justify-center items-center flex-col gap-7">
