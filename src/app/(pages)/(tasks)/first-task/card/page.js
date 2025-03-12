@@ -213,7 +213,7 @@ function Map() {
                 onClick={() => router.push('/first-task/map')}
                 className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-4 rounded-full logo text-xl"
             >
-                Get Direction
+                Get Directions
             </button>
             </>
         )}
