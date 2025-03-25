@@ -40,7 +40,7 @@ export default function NarrativePage() {
 
   useEffect(() => {
     if (currentIndex === 2) {
-      router.push('/second-task/card')
+      router.push('/second-task/card-task')
     }
   }, [currentIndex, router])
 
