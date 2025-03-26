@@ -20,17 +20,15 @@ export default function End() {
       
   return (
     <>
-      <div className="w-screen h-screen fixed z-20 flex flex-col justify-center items-center template_box gap-[40px]">
+      <div className="w-screen h-screen fixed z-20 flex flex-col justify-center items-center template_box gap-[40px] bg-[#1D3342]">
         <Image 
-            src="/studio-logo.png"
+            src="/studiologo.png"
             alt="Studio Logo"
             width="250"
             height="250"
         />
+        <p className="logo text-light presents">PRESENTS</p>
       </div>
-
-      {/* bg */}
-      <div className="w-screen h-screen gradient fixed z-10"></div>
     </>
   )
 }

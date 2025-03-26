@@ -109,3 +109,9 @@ body {
 .mapboxgl-ctrl-top-right {
   display: none;
 }
+
+.presents {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 5.4px;
+}
