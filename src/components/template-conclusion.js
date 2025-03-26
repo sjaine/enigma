@@ -22,7 +22,7 @@ export default function Template({
               alt={cardImageSrc}
               width={0}
               height={0}
-              className="w-full h-full mb-10"
+              className="w-full h-full mb-4"
             />
 
           {/* Boxes */}
