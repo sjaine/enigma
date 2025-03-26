@@ -37,6 +37,8 @@ export default function Template({
               {paragraphText}
             </p>
 
+            
+
             {/* Btns */}
             <div className="flex w-full justify-between mt-2.5">
               {/* Conditionally Render Back Button */}

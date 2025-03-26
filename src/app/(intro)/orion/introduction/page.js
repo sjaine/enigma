@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react'
 import Template from '@/components/template'
 import { useRouter } from 'next/navigation'
+import GlitchOverlay from '@/components/GlitchOverlay'
 
 export default function NarrativePage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const router = useRouter()
+  const [showGlitch, setShowGlitch] = useState(false)
 
   const scenes = [
     {
@@ -62,20 +64,31 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 6) {
-      router.push('/first-task')
+    if (currentIndex === 6 && !showGlitch) {
+      setShowGlitch(true)
     }
-  }, [currentIndex, router])
+  }, [currentIndex, showGlitch])
 
   return (
-    <Template
-      characterName={scenes[currentIndex].characterName}
-      characterImageSrc={scenes[currentIndex].characterImageSrc}
-      paragraphText={scenes[currentIndex].paragraphText}
-      bgImage={scenes[currentIndex].bgImage}
-      onNext={handleNext}
-      onBack={handleBack}
-      showBackButton={currentIndex !== 0}
-    />
+    <>
+      {showGlitch && (
+        <GlitchOverlay
+          duration={2000}
+          onFinish={() => {
+            router.push('/first-task')
+          }}
+        />
+      )}
+  
+      <Template
+        characterName={scenes[currentIndex].characterName}
+        characterImageSrc={scenes[currentIndex].characterImageSrc}
+        paragraphText={scenes[currentIndex].paragraphText}
+        bgImage={scenes[currentIndex].bgImage}
+        onNext={handleNext}
+        onBack={handleBack}
+        showBackButton={currentIndex !== 0}
+      />
+    </>
   )
 }
