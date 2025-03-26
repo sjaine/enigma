@@ -18,40 +18,16 @@ export default function NarrativePage() {
     },
     {
       characterName: 'Fen',
-      paragraphText: 'You didn’t just defeat evil; you restored balance and uncovered the means necessary to reignite hope in light of wickedness',
+      paragraphText: 'You didn’t just defeat evil; you restored balance and uncovered the means necessary to reignite hope in light of wickedness.',
       bgImage: '/bc-rb.png',
       characterImageSrc: '/fen/fen-thumb.png',
     },
     {
       characterName: 'Fen',
-      paragraphText: 'While our journey together may be over, the story of your world is only just beginning. May you keep the knowledge you’ve gained close and keep applying it.',
+      paragraphText: 'You didn’t just defeat evil; you restored balance and uncovered the means necessary to reignite hope in light of wickedness.',
       bgImage: '/bc-rb.png',
-      characterImageSrc: '/fen/fen-h.png',
+      characterImageSrc: '/fen/fen-thumb.png',
     },
-    {
-        characterName: 'Orion',
-        paragraphText: 'You think you’ve won? You fight for hope. I fight because I know hope is a lie. No matter how many times you strike me down, my legacy will remain.',
-        bgImage: '/orion/orion-bc.png',
-        characterImageSrc: '/orion/orion-l.png',
-      },
-      {
-        characterName: 'Orion',
-        paragraphText: 'The world will remember me… but will it remember you?',
-        bgImage: '/orion/orion-bc.png',
-        characterImageSrc: '/orion/orion-l.png',
-      },
-      {
-        characterName: 'Orion',
-        paragraphText: 'My shadow will wait unseen, in the veil of darkness, ready to return at any moment. You’ll see, I am the one who decides how this story ends.',
-        bgImage: '/orion/orion-bc.png',
-        characterImageSrc: '/orion/orion-l.png',
-      },
-      {
-        characterName: 'Orion',
-        paragraphText: 'My shadow will wait unseen, in the veil of darkness, ready to return at any moment. You’ll see, I am the one who decides how this story ends.',
-        bgImage: '/orion/orion-bc.png',
-        characterImageSrc: '/orion/orion-l.png',
-      },
   ]
 
   const handleNext = () => {
@@ -63,8 +39,8 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 6) {
-      router.push('/end')
+    if (currentIndex === 2) {
+      router.push('/conclusion/card')
     }
   }, [currentIndex, router])
 

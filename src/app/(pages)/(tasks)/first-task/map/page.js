@@ -147,7 +147,7 @@ function Map() {
 
       {/* Hint Options */}
       {showHints && (
-        <div className="absolute w-full flex flex-col gap-[15px] bottom-[0px] p-16">
+        <div className="absolute w-full flex flex-col gap-[15px] bottom-[0px] p-8">
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
             onClick={() => alert('First hint: Move towards J-Wing')}
