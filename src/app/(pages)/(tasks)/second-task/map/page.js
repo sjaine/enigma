@@ -137,7 +137,7 @@ function Map() {
       />
 
       <button
-        className="absolute border-2 border-brown text-brown logo text-xl font-bold py-2 px-8 rounded-full m-3 bg-light cursor-pointer bottom-[200px] p-4"
+        className="absolute border-2 border-brown text-brown logo text-xl font-bold py-2 px-8 rounded-full m-3 bg-light cursor-pointer bottom-[20vh] p-4"
         onClick={() => router.push('/second-task/pink-hallway')}
       >
         Are you there?
