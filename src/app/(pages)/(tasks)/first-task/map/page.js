@@ -138,12 +138,12 @@ function Map() {
       />
 
       {/* Help Button */}
-      <div
-        className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center help-btn logo text-3xl cursor-pointer"
+      <button
+        className="absolute border-2 border-brown text-brown logo text-xl font-bold py-2 px-8 rounded-full m-3 bg-light cursor-pointer top-[5vh] p-4"
         onClick={() => setShowHints(!showHints)}
       >
-        ?
-      </div>
+        What should I do?
+      </button>
 
       {/* Hint Options */}
       {showHints && (
