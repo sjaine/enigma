@@ -162,25 +162,25 @@ function Map() {
         <div className="absolute w-full flex flex-col gap-[15px] bottom-[0px] p-8">
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
-            onClick={() => setActiveHint('first')}
+            onClick={() => {setActiveHint('first'); setShowHints(false);}}
           >
             First Book
           </button>
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
-            onClick={() => setActiveHint('second')}
+            onClick={() => {setActiveHint('second'); setShowHints(false);}}
           >
             Second Book
           </button>
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
-            onClick={() => setActiveHint('third')}
+            onClick={() => {setActiveHint('third'); setShowHints(false);}}
           >
             Third Book
           </button>
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
-            onClick={() => setActiveHint('answer')}
+            onClick={() => {setActiveHint('answer'); setShowHints(false);}}
           >
             The Answer
           </button>
