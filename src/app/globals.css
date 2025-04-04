@@ -88,6 +88,12 @@ body {
   object-fit: cover;
 }
 
+.taskImg {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .hint-btn {
   display: block;
   width: 100%;

@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation'
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -10,10 +11,21 @@ function Map() {
   const userLocationRef = useRef(null);
   const geolocateControlRef = useRef(null);
 
+  const router = useRouter()
+
   const destinationCoordinates = [-79.6988871657093, 43.4686279785684]; // [longitude, latitude]
 
   // State to toggle hint menu
   const [showHints, setShowHints] = useState(false);
+  const [activeHint, setActiveHint] = useState(null); // null, 'first', 'second', 'third', 'answer'
+
+  const handleClick = (option) => {
+    if (option === "@earth.n.us") {
+      router.push('/second-task'); // Replace with your actual route
+    } else {
+      alert(`Think about it again!`);
+    }
+  };
 
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
@@ -150,30 +162,117 @@ function Map() {
         <div className="absolute w-full flex flex-col gap-[15px] bottom-[0px] p-8">
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
-            onClick={() => alert('First hint: Move towards J-Wing')}
+            onClick={() => setActiveHint('first')}
           >
-            First Account
+            First Book
           </button>
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
-            onClick={() => alert('Second hint: You are near a green space')}
+            onClick={() => setActiveHint('second')}
           >
-            Second Account
+            Second Book
           </button>
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
-            onClick={() => alert('Third hint: Look for a building sign')}
+            onClick={() => setActiveHint('third')}
           >
-            Third Account
+            Third Book
           </button>
           <button
             className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2 bg-light cursor-pointer"
-            onClick={() => alert('The answer is J-Wing!')}
+            onClick={() => setActiveHint('answer')}
           >
-            Type The Answer!
+            The Answer
           </button>
         </div>
       )}
+
+      {activeHint === 'first' && (
+        <div className="fixed bg-light card text-brown border-2 border-brown rounded-3xl flex justify-center items-center flex-col p-5 gap-[10px]">
+          <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
+              <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">!</div>
+              <p>Hint!</p>
+          </div>
+
+          <div>
+              <img src="/taskone/firstbook.png" alt="First Book" className="taskImg mb-5" />
+              <p className="text-xl text-brown mt-3 subhead">📔 Find this book in the *Food* section!</p>
+          </div>
+          
+          <button
+              onClick={() => setActiveHint('null')}
+              className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-2 rounded-full logo text-xl"
+          >
+              Close
+          </button>
+        </div>
+      )}
+
+      {activeHint === 'second' && (
+        <div className="fixed bg-light card text-brown border-2 border-brown rounded-3xl flex justify-center items-center flex-col p-5 gap-[10px]">
+        <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
+            <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">!</div>
+            <p>Hint!</p>
+        </div>
+
+        <div>
+            <img src="/taskone/secondbook.png" alt="Second Book" className="taskImg mb-5" />
+            <p className="text-xl text-brown mt-3 subhead">📔 Find this book in the *Graphic Novel* section!</p>
+        </div>
+        
+        <button
+            onClick={() => setActiveHint('null')}
+            className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-2 rounded-full logo text-xl"
+        >
+            Close
+        </button>
+      </div>
+      )}
+
+      {activeHint === 'third' && (
+        <div className="fixed bg-light card text-brown border-2 border-brown rounded-3xl flex justify-center items-center flex-col p-5 gap-[10px]">
+        <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
+            <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">!</div>
+            <p>Hint!</p>
+        </div>
+
+        <div>
+            <img src="/taskone/thirdbook.png" alt="Third Book" className="taskImg mb-5" />
+            <p className="text-xl text-brown mt-3 subhead">📔 Find this book in the *Mythodology* section!</p>
+        </div>
+        
+        <button
+            onClick={() => setActiveHint('null')}
+            className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-2 rounded-full logo text-xl"
+        >
+            Close
+        </button>
+      </div>
+      )}
+
+      {activeHint === 'answer' && (
+        <div className="fixed bg-light card text-brown border-2 border-brown rounded-3xl flex justify-center items-center flex-col p-5 gap-[30px]">
+        <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
+            <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">?</div>
+            <p>What's the answer?</p>
+        </div>
+
+        <div className="block w-full flex flex-col gap-[15px]">
+            {["@globalheadline_offical", "@earth.n.us", "@vegcrisp.ca"].map(
+            (option, index) => (
+                <button
+                key={index}
+                className="block w-full border-2 border-brown text-brown logo text-xl font-bold py-2 px-4 rounded-full mt-2"
+                onClick={() => handleClick(option)}
+                >
+                {option}
+                </button>
+            )
+            )}  
+        </div>
+        </div>
+      )}
+
     </>
   );
 }
