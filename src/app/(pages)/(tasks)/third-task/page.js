@@ -34,8 +34,8 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 5) {
-      router.push('/third-task/card')
+    if (currentIndex === 1) {
+      router.push('/third-task/game')
     }
   }, [currentIndex, router])
 

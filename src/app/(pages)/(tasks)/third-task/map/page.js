@@ -136,13 +136,6 @@ function Map() {
         ref={mapContainerRef}
         style={{ width: '100%', height: '100vh' }} // Full screen height
       />
-
-      <button
-        className="absolute border-2 border-brown text-brown logo text-xl font-bold py-2 px-8 rounded-full m-3 bg-light cursor-pointer bottom-[10vh] p-4"
-        onClick={() => router.push('/third-task')}
-      >
-        Are you there?
-      </button>
     </>
   );
 }
