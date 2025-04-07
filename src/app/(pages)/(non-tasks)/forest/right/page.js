@@ -41,25 +41,7 @@ export default function NarrativePage() {
     },
     {
       characterName: 'Orion',
-      paragraphText: 'To figure out which tool can help you fulfill this final task, first determine what reflects this riddle.',
-      bgImage: '/forest.png',
-      characterImageSrc: '/orion/orion-m.png',
-    },
-    {
-      characterName: 'Orion',
-      paragraphText: 'I speak without a tongue, yet tell no lies.',
-      bgImage: '/forest.png',
-      characterImageSrc: '/orion/orion-m.png',
-    },
-    {
-      characterName: 'Orion',
-      paragraphText: 'I show you the world, But only through your eyes. I follow your steps, Yet never leave my place. What am I? ',
-      bgImage: '/forest.png',
-      characterImageSrc: '/orion/orion-m.png',
-    },
-    {
-      characterName: 'Orion',
-      paragraphText: 'I show you the world, But only through your eyes. I follow your steps, Yet never leave my place. What am I? ',
+      paragraphText: 'To decipher the anagram, you must look at it from a new perspective.',
       bgImage: '/forest.png',
       characterImageSrc: '/orion/orion-m.png',
     },
@@ -74,7 +56,7 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 8) {
+    if (currentIndex === 5) {
       router.push('/forest/card')
     }
   }, [currentIndex, router])

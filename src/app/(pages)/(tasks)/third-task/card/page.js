@@ -136,7 +136,7 @@ function Map() {
         </div>
 
         <div>
-            <img src="/cafeteria.jpg" alt="cafeteria" className="questImg mb-5" />
+            <img src="/cafeteria.png" alt="cafeteria" className="questImg mb-5" />
             <p className="text-xl text-brown mt-2 subhead">📍 Location: Cafeteria</p>
                 <p className="text-xl text-brown mt-3 subhead">📝 Task: Head to the Cafeteria. There, seek the next task.</p>
         </div>
