@@ -12,7 +12,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 function Map() {
-    const [step, setStep] = useState(1);
     const router = useRouter()
 
     const mapRef = useRef()
@@ -131,18 +130,23 @@ function Map() {
       />
 
       <div className="fixed bg-light card text-brown border-2 border-brown rounded-3xl flex justify-center items-center flex-col p-5 gap-[30px]">
-        <div className="fixed bg-light card text-brown border-2 border-brown rounded-3xl flex justify-start items-center flex-col p-5 gap-[50px] pt-10">
-          <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
-              <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">!</div>
-              <p>Find right entrance!</p>
-          </div>
-
-          <div>
-              <img src="/entrance.jpg" alt="entrance" className="questImg mb-5" />
-              <p className="text-xl text-brown mt-2 subhead">📍 Location: Forest Entrance</p>
-                  <p className="text-xl text-brown mt-3 subhead">📝 Task: Find right forest entrance. There, seek the next clue.</p>
-          </div>
+        <div className="logo flex flex-col justify-center items-center text-3xl gap-[7px]">
+            <div className="bg-brown text-light w-[45px] h-[45px] rounded-full flex justify-center items-center">!</div>
+            <p>New Quest!</p>
         </div>
+
+        <div>
+            <img src="/entrance.jpg" alt="forest" className="questImg mb-5" />
+            <p className="text-xl text-brown mt-2 subhead">📍 Location: Forest Entrance</p>
+                <p className="text-xl text-brown mt-3 subhead">📝 Task: Head to the Forest. There, seek the next task.</p>
+        </div>
+        
+        <button
+            onClick={() => router.push('/dark-room/map')}
+            className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-4 rounded-full logo text-xl"
+        >
+            Get Directions
+        </button>
       </div>
     </>
   )

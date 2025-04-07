@@ -32,7 +32,7 @@ function Map() {
               onClick={() => window.location.href = 'https://enigma-arfilter.netlify.app/'}
               className="bg-redLight border-2 border-brown text-light font-bold py-2 px-4 mt-4 rounded-full logo text-xl"
           >
-              Scan QR Code
+              Scan Illustration!
           </button>
       </div>
     </>

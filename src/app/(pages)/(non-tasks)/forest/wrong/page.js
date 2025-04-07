@@ -36,15 +36,9 @@ export default function NarrativePage() {
     },
     {
       characterName: 'Fen',
-      paragraphText: 'For the final clue, you must unscramble this word: “nkesremoecs”.',
+      paragraphText: 'After all, you’re only useful to me as long as you follow my instructions.',
       bgImage: '/forest.png',
-      characterImageSrc: '/fen/fen-c.png',
-    },
-    {
-      characterName: 'Fen',
-      paragraphText: 'For the final clue, you must unscramble this word: “nkesremoecs”.',
-      bgImage: '/forest.png',
-      characterImageSrc: '/fen/fen-c.png',
+      characterImageSrc: '/fen/fen-e.png',
     },
   ]
 
@@ -57,8 +51,8 @@ export default function NarrativePage() {
   }
 
   useEffect(() => {
-    if (currentIndex === 5) {
-      router.push('/dark-room')
+    if (currentIndex === 4) {
+      router.push('/fourth-task/map')
     }
   }, [currentIndex, router])
 

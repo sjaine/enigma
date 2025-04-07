@@ -122,3 +122,9 @@ body {
   font-weight: 300;
   letter-spacing: 5.4px;
 }
+
+
+.qrcode {
+  width: 100%;
+  margin-bottom: 50px;
+}

@@ -238,7 +238,7 @@ function Map() {
 
         <div>
             <img src="/taskone/thirdbook.png" alt="Third Book" className="taskImg mb-5" />
-            <p className="text-xl text-brown mt-3 subhead">📔 Find this book in the *Mythodology* section!</p>
+            <p className="text-xl text-brown mt-3 subhead">📔 Find this book in the *Mythology* section!</p>
         </div>
         
         <button

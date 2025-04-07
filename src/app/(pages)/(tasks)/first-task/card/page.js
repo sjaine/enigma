@@ -140,7 +140,7 @@ function Map() {
             </div>
 
             <div className="flex gap-[20px] flex-col subhead text-lg">
-                <p>Fin left me with the first task to complete—but there’s a riddle, a tricky one at that:</p>
+                <p>Fen left me with the first task to complete—but there’s a riddle, a tricky one at that:</p>
                 <p>“I hold many worlds yet never leave my place. Pages turn within me, but I never show my face. What am I?” </p>
                 <p>Can you make sense of it? </p>
             </div>
