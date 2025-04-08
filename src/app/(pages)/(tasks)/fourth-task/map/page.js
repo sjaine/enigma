@@ -136,7 +136,7 @@ function Map() {
         </div>
 
         <div className="qrcode">
-            <img src="/qrcode.jpg" alt="QR code" className="questImg mb-5" />
+            <img src="/qrc.jpg" alt="QR code" className="questImg mb-5" />
             <p className="text-xl text-brown mt-2 subhead">📍 Location: Forest Entrance</p>
                 <p className="text-xl text-brown mt-3 subhead">📝 Task: Seek this QR code.</p>
         </div>
